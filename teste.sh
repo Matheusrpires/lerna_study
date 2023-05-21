@@ -9,8 +9,8 @@ output_file="version_output_$(date +%s%N).txt"
 echo "Running custom logic for $package_new_version"
 # Add your custom logic here for all packages
 
+if [[ $package == *$package_new_version* ]]; then
     echo "$package_new_version" >> "$output_file"
-if [[ $package == *"$package_new_version"* ]]; then
     echo "Parameter 1 contains Parameter 2"
 else
     echo "Parameter 1 does not contain Parameter 2"
